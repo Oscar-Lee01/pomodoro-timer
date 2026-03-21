@@ -11,11 +11,11 @@ body {
   background: linear-gradient(135deg, BLACK, #072cfd);
   color: white;
 
-  /* Center app vertically + horizontally */
   min-height: 100vh;
-  display: flex;
+  display: block;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
 
 }
 
@@ -32,6 +32,7 @@ body {
   width: 95%;
   max-width: 420px;
   text-align: center;
+  margin: 60px auto; /*Centers app horizontally*/
 }
 
 
@@ -154,6 +155,10 @@ button:active {
   transform: scale(0.96);
 }
 
+.icon {
+  margin-right: 6px;
+  font-size: 14px;
+}
 
 /* SESSION COUNTER */
 .counter {
@@ -253,6 +258,7 @@ button:active {
     backdrop-filter: none;
     box-shadow: none;
     max-width: 700px;
+    /* margin-top: 80px; */
   }
 
   .title {
@@ -288,12 +294,20 @@ button:active {
   }
 
   .pomo-ring-circle {
-    stroke: #d1d5db;
-  }
+  fill: transparent;
+  stroke: floralwhite;
+  stroke-width: 10;
+  stroke-linecap: round;
+
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  transition: stroke-dashoffset 0.5s linear;  }
 
   .pomo-ring-bg {
-    stroke: #e5e7eb;
-  }
+  fill: transparent;
+  stroke: rgba(255, 255, 255, 0.2);
+  stroke-width: 10;
+}
 
   .controls {
     margin-top: 40px;
@@ -316,6 +330,11 @@ button:active {
 
   button:active {
     transform: scale(0.96);
+}
+
+.icon {
+  margin-right: 6px;
+  font-size: 14px;
 }
 
 }
