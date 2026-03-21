@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Pomodoro Timer</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <main class="app" role="application" aria-label="Pomodoro Timer">
+    <h1 class="title">Pomodoro Timer</h1>
+
+    <!-- Session Display -->
+    <p id="sessionLabel" class="session-label" aria-live="polite">
+      Work Session
+    </p>
+
+    <!-- Timer -->
+    <div class="timer-container">
+
+      <!-- Pomodoro Progress Ring -->
+      <svg class="pomo-ring" width="220" height="220">
+
+        <circle class="pomo-ring-bg" cx="110" cy="110" r="100">
+        </circle>
+
+        <circle class="pomo-ring-circle" cx="110" cy="110" r="100">
+        </circle>
+
+      </svg>
+
+    <!-- Timer Display -->
+    <div class="timer" id="timer" aria-live="polite">
+      25:00
+    </div>
+
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+
+      <button id="startBtn" aria-label="Start timer">
+        ▶ Start
+      </button>
+
+      <button id="pauseBtn" aria-label="Pause timer">
+        ⏸ Pause
+      </button>
+
+      <button id="resetBtn" aria-label="Reset timer">
+        ↻ Reset
+      </button>
+
+    </div>
+
+    <!-- Session Counter -->
+    <p class="counter">
+      Sessions completed:
+      <span id="sessionCount">0</span>
+    </p>
+
+    <div class="session-dots" id="sessionDots" aria-label="Work session progress">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+    <!-- Settings Panel -->
+    <section class="settings">
+
+      <h3>Settings</h3>
+
+      <label>
+        Work (minutes)
+        <input id="workInput" type="number" value="25" min="1" />
+      </label>
+
+      <label>
+        Short Break
+        <input id="shortInput" type="number" value="5" min="1" />
+      </label>
+
+      <label>
+        Long Break
+        <input id="longInput" type="number" value="15" min="1" />
+      </label>
+
+      <button id="saveBtn">
+        Save
+      </button>
+
+    </section>
+
+  </main>
+
+  <script src="js/app.js"></script>
+
+
+</body>
+</html>
