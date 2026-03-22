@@ -131,6 +131,11 @@ button {
   flex: 1;
   padding: 12px 14px;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
   border: none;
   border-radius: 14px;
   cursor: pointer;
@@ -158,6 +163,9 @@ button:active {
 .icon {
   margin-right: 6px;
   font-size: 14px;
+  height: 16px;
+  width: 16px;
+  vertical-align: middle;
 }
 
 /* SESSION COUNTER */
@@ -319,8 +327,15 @@ button:active {
     color: white;
     padding: 14px 22px;
     font-size: 16px;
+    font-weight: 600;
+
     border-radius: 12px;
     transition: all 0.25s ease;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
   }
 
   button:hover {
@@ -335,6 +350,9 @@ button:active {
 .icon {
   margin-right: 6px;
   font-size: 14px;
+  height: 16px;
+  width: 16px;
+  vertical-align: middle;
 }
 
 }
